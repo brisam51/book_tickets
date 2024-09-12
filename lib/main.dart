@@ -1,7 +1,9 @@
 import 'package:book_tickets/app_routes.dart';
 import 'package:book_tickets/base/widgets/ticket_view.dart';
+import 'package:book_tickets/screens/home/all_hotels.dart';
 import 'package:book_tickets/screens/home/bottom_navbar.dart';
 import 'package:book_tickets/screens/home/all_tickets.dart';
+import 'package:book_tickets/screens/home/widgets/hotel_details.dart';
 import 'package:book_tickets/screens/ticket/ticket_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -17,11 +19,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {
-
         AppRoutes.homePage: (context) => const BottomNavbar(),
-       //'all_tickets':(context)=>const AllTickets(),
         AppRoutes.allTickets: (context) => const AllTickets(),
-      AppRoutes.ticketScreen: (context) => const TicketScreen(),
+        AppRoutes.ticketScreen: (context) => const TicketScreen(),
+        AppRoutes.allHotels: (context) => const AllHotels(),
+        AppRoutes.hotelDetails: (context) => const HotelDetails(),
       },
     );
   }

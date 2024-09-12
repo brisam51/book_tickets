@@ -1,5 +1,4 @@
 import 'package:book_tickets/base/rese/styles/app_style.dart';
-
 import 'package:flutter/material.dart';
 
 class Hotel extends StatelessWidget {

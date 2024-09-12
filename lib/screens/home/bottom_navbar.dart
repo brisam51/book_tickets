@@ -1,5 +1,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables
 
+import 'package:book_tickets/app_routes.dart';
+import 'package:book_tickets/screens/home/all_tickets.dart';
 import 'package:book_tickets/screens/home/home_secreen.dart';
 import 'package:book_tickets/screens/search/search_screen.dart';
 import 'package:book_tickets/screens/ticket/ticket_screen.dart';
@@ -17,7 +19,8 @@ class _BottomNavbarState extends State<BottomNavbar> {
   final appSecreen = [
     const HomeScreen(),
     const SearchScreen(),
-    const TicketScreen(),
+   const AllTickets(),
+   // const Center(child: Text('profile')),
     const Center(child: Text('profile')),
   ];
   int _selectedIndex = 0;
