@@ -1,9 +1,13 @@
+// ignore: file_names
 import 'package:flutter/material.dart';
 
-class AppLayoutbuilderWidget extends StatelessWidget {
+class AppLayoutBuilderWidget extends StatelessWidget {
   final int randomDivider;
+  final double width;
+  final bool? isColor;
 
-  const AppLayoutbuilderWidget({super.key, required this.randomDivider});
+  const AppLayoutBuilderWidget(
+      {super.key, required this.randomDivider, this.width = 3, this.isColor});
 
   @override
   Widget build(BuildContext context) {
@@ -13,12 +17,13 @@ class AppLayoutbuilderWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         direction: Axis.horizontal,
         children: List.generate(
-            (constraints.constrainWidth() / randomDivider).floor(),
-            (index) => Container(
-              width: 2,
-              height: 2,
-              color: Colors.white,
-            ),),
+          (constraints.constrainWidth() / randomDivider).floor(),
+          (index) => Container(
+            width: 2,
+            height: 2,
+            color: Colors.white,
+          ),
+        ),
       );
     });
   }

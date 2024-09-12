@@ -4,14 +4,16 @@ import '../rese/styles/app_style.dart';
 
 class TextStyleThird extends StatelessWidget {
   final String text;
-  const TextStyleThird({super.key,required this.text});
+  final bool? isColor;
+  const TextStyleThird({super.key, required this.text, this.isColor});
 
   @override
   Widget build(BuildContext context) {
-    return  Text(
+    return Text(
       text,
-      style: AppStyle.heedLine2
-          .copyWith(color: Colors.white, fontSize: 16),
+      style: isColor == null
+          ? AppStyle.heedLine2.copyWith(color: Colors.white, fontSize: 16)
+          : AppStyle.heedLine3,
     );
   }
 }

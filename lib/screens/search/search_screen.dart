@@ -16,8 +16,8 @@ class SearchScreen extends StatelessWidget {
       backgroundColor: AppStyle.bgColor,
       body: ListView(
         children: [
-          Container(
-            child: Column(
+
+            Column(
               children: [
                 Container(
                   child: Text(
@@ -63,7 +63,7 @@ class SearchScreen extends StatelessWidget {
                 ),
               ],
             ),
-          )
+
         ],
       ),
     );

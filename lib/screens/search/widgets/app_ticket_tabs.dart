@@ -19,7 +19,7 @@ class AppTicketTabs extends StatelessWidget {
         tabColor: true,
       ),
     ]);
-    ;
+  
   }
 }
 

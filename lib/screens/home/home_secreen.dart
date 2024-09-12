@@ -6,6 +6,8 @@ import 'package:book_tickets/base/widgets/ticket_view.dart';
 import 'package:book_tickets/screens/home/widgets/hotel.dart';
 import 'package:flutter/material.dart';
 
+import '../../app_routes.dart';
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -95,7 +97,7 @@ class HomeScreen extends StatelessWidget {
             child: const AppDoubleText(
               bigText: 'Upcoming Flight',
               smalText: 'View all',
-              routeName: 'all_tickets',
+              routeName: AppRoutes.allTickets,
             ),
           ),
           SingleChildScrollView(

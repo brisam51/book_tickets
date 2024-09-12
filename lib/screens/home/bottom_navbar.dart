@@ -17,7 +17,7 @@ class _BottomNavbarState extends State<BottomNavbar> {
   final appSecreen = [
     const HomeScreen(),
     const SearchScreen(),
-    const TickeScreen(),
+    const TicketScreen(),
     const Center(child: Text('profile')),
   ];
   int _selectedIndex = 0;
