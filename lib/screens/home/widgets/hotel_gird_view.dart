@@ -4,15 +4,15 @@ import 'package:flutter/material.dart';
 
 class HotelGirdView extends StatelessWidget {
   final Map<String, dynamic> hotel;
-
-  const HotelGirdView({super.key, required this.hotel});
+final int index;
+  const HotelGirdView({super.key, required this.hotel,required this.index});
 
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return GestureDetector(
       onTap: (){
-        Navigator.pushNamed(context,AppRoutes.hotelDetails);
+        Navigator.pushNamed(context,AppRoutes.hotelDetails,arguments: {"index":index});
       },
       child: Container(
         width: size.width * 0.70,

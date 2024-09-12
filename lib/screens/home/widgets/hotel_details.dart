@@ -1,7 +1,24 @@
+import 'package:book_tickets/base/rese/styles/app_style.dart';
+import 'package:book_tickets/base/rese/utiles/all_json.dart';
 import 'package:flutter/material.dart';
 
-class HotelDetails extends StatelessWidget {
+class HotelDetails extends StatefulWidget {
   const HotelDetails({super.key});
+
+  @override
+  State<HotelDetails> createState() => _HotelDetailsState();
+}
+
+class _HotelDetailsState extends State<HotelDetails> {
+  late int index = 0;
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    var args = ModalRoute.of(context)!.settings.arguments as Map;
+    print(args['index']);
+    index = args["index"];
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -11,10 +28,12 @@ class HotelDetails extends StatelessWidget {
           SliverAppBar(
             expandedHeight: 300.2,
             flexibleSpace: FlexibleSpaceBar(
-              title: const Text('Hotel Title'),
-              background: Image.network(
-                  'https://placehold.jp/3d4070/ffffff/500x350.png'),
-            ),
+                title: Text(
+                  hotelList[index]['place'],
+                  style: AppStyle.heedLine4.copyWith(color: Colors.blue[600]),
+                ),
+                background:
+                    Image.asset('assets/images/${hotelList[index]['image']}'),),
           ),
           SliverList(
             delegate: SliverChildListDelegate([

@@ -13,7 +13,7 @@ class AllHotels extends StatelessWidget {
       appBar: GradientAppBar(
         title: const Text('All Hotels'),
         centerTitle: true,
-        gradient: LinearGradient(
+        gradient:const LinearGradient(
             begin: Alignment.bottomRight,
             end: Alignment.topLeft,
             colors: [Colors.green, Colors.blue]),
@@ -32,8 +32,9 @@ class AllHotels extends StatelessWidget {
             itemCount:hotelList.length,
 
             itemBuilder: (context, index) {
+              //important
               var singleHotel=hotelList[index];
-              return HotelGirdView(hotel: singleHotel);
+              return HotelGirdView(hotel: singleHotel,index:index);
             }),
       ),
     );
